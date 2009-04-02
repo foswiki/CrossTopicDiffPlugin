@@ -1,0 +1,59 @@
+%META:TOPICINFO{author="BaseUserMapping_333" date="1237924772" format="1.1" version="1.2"}%
+---+ Cross-Topic Diff Plugin
+
+This Plugin compares different topics, or even whole webs
+
+%TOC%
+
+---++ Comparing topics
+
+%<nop>COMPARETOPICS{OtherTopic}% compares the current topic with OtherTopic in the same web.
+
+%<nop>COMPARETOPICS{web="Able"}% compares the current topic with the same topic in the Able web.
+
+%<nop>COMPARETOPICS{web1="Able" web2="Baker"}% compares the current topic in the Able web with the same topic in the Baker web.
+
+%<nop>COMPARETOPICS{web1="Able" web2="Baker" comparetopic="ThatTopic"}% compares ThatTopic in the Able web with ThatTopic in the Baker web.
+
+%<nop>COMPARETOPICS{comparetopic1="ThatTopic" comparetopic2="OtherTopic"}% compares ThatTopic in the current web with OtherTopic in the same web.
+
+%<nop>COMPARETOPICS{web="Able" comparetopic1="ThatTopic" comparetopic2="OtherTopic"}% compares ThatTopic in the Able web with OtherTopic in the Able web.
+
+%<nop>COMPARETOPICS{web1="Able" web2="Baker" comparetopic1="ThatTopic" comparetopic2="OtherTopic"}% compares ThatTopic in the Able web with OtherTopic in the Baker web.
+
+%<nop>COMPARETOPICS{web1="Able" web2="Baker" comparetopic1="ThatTopic" comparetopic2="OtherTopic" rev1="3" rev2="4"}% compares revision 3 of ThatTopic in the Able web with revision 4 of OtherTopic in the Baker web.
+
+---++ Comparing webs
+
+%<nop>COMPAREWEBS{Otherweb}% compares the current web with the Otherweb web.
+
+%<nop>COMPAREWEBS{web1="Able" web2="Baker"}% compares the Able web with Baker web.
+
+%<nop>COMPAREWEBS{...}% lists all of the topics in each web in a table, in alphabetic order.
+The table shows which topics are only in one web, and which are in both.
+For the topics that are in one web, there is a link to copy the topic to the other web.
+For topics that are in both webs, the table shows whether they are the same, and provides a link to compare the two topics.
+
+The compare-topics link loads the same page, but replaces the web-comparison with a comparison of the topics from the different web,
+and includes a link to return to the web-comparison.
+
+The Plugin uses javascript and a REST handler to determine if the topics in both webs are the same.
+This can take some time to complete.
+
+---++ Plugin Preferences
+
+   * One line description, used by other tools:
+      * Set SHORTDESCRIPTION = Compares different topics, or whole webs
+
+---++ Installation
+%$INSTALL_INSTRUCTIONS%
+
+---++ Plugin Info
+
+|  Author: | Foswiki:Main.PluginAuthor|
+|  Copyright: | &copy; 2008, Foswiki Contributors |
+|  License: | GPL ([[http://www.gnu.org/copyleft/gpl.html][GNU General Public License]]) |
+|  Version: | %$VERSION% |
+|  Home: | http://foswiki.org/Extensions/%TOPIC%Dev |
+|  Support: | http://foswiki.org/Support/%TOPIC% |
+
